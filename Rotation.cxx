@@ -18,38 +18,49 @@ void red(int x,int y1,int y2)
     }
 }
 
+void yellow(int x,int y1,int y2)
+{
+    for(int i=y1; i<=y2; i++)
+    {
+        putpixel(x,i,YELLOW);
+    }
+}
+
 
 int main()
 {
     int gdriver = DETECT, gmode, errorcode;
     initgraph(&gdriver, &gmode,"C:\\TURBOC3\\BGI");
     int r=80;
-    int s=320-r,e=320+r;
+    int x1=320-r,x2=320,x3=320+r;
     //drawcircle(r);
     while(1)
     {
-
-        int i=s;
-        int j=0;
+        int x=x1;
         int y1=240,y2=240;
-        while(j<(e-s)/2)
+        while(x<x2)
         {
             drawcircle(r);
-            red(i,y1,y2);
-            delay(50);
+            red(x,y1,y2);
+            if (x>(x1+20)){
+                yellow(x-20,y1,y2);
+            }
+            delay(20);
             cleardevice();
-            i++;
-            j++;
+            x++;
             y1--;
             y2++;
         }
-        while(i<=e)
+        while(x<=x3)
         {
             drawcircle(r);
-            red(i,y1,y2);
-            delay(50);
+            red(x,y1,y2);
+            if (x>(x2+20)){
+                yellow(x-20,y1,y2);
+            }
+            delay(20);
             cleardevice();
-            i++;
+            x++;
             y1++;
             y2--;
         }
@@ -60,4 +71,17 @@ int main()
     closegraph();
     return 0;
 }
+
+/*while(x<=y)
+    {
+        if(d<0)
+            d+=2*x+3;
+        else
+        {
+            d+= 2*x -2*y +5;
+            y--;
+        }
+        x++;
+        circles(x,y,x1,y1);
+    }*/
 

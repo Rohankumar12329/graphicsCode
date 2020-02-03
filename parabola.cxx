@@ -1,3 +1,11 @@
+#include <graphics.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+#include<iostream>
+
+
 drawParabola(int x,int y)
 {
     putpixel(x+320,y+240,WHITE);

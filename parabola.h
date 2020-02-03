@@ -6,8 +6,6 @@ drawParabola(int x,int y,int x1,int y1)
 
 void parabola(int p,int x1,int y1)
 {
-    int gdriver = DETECT, gmode, errorcode;
-    initgraph(&gdriver, &gmode,"C:\\TURBOC3\\BGI");
 
     int x=0,y=0,d=2*(p-1);
     drawParabola(x,y,x1,y1);

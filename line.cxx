@@ -11,8 +11,8 @@ void lineex(int x1,int x2,int y1,int y2)
     initgraph(&gdriver, &gmode, "C:\\TURBOC3\\BGI");
     int dx,dy,d,x,y;
     dx=x2-x1;
-    dy=y2-y1;
-    if(abs(dy)<abs(dx))
+    dy=y1-y2;
+    if((dy)<(dx))
     {
         d=2*dy-dx;
         x=x1;
@@ -28,7 +28,7 @@ void lineex(int x1,int x2,int y1,int y2)
             else
             {
                 d += 2*(dy-dx);
-                y++;
+                y--;
             }
             x++;
             putpixel(x,y,WHITE);
@@ -41,10 +41,10 @@ int main(void)
 {
    int gdriver = DETECT, gmode, errorcode;
    int x2,y1,x1,y2;
-   x1=10;
-   y1=10;
-   x2=100;
-   y2=30;
+   x1=320;
+   y1=200;
+   x2=380;
+   y2=190;
    initgraph(&gdriver, &gmode, "C:\\TURBOC3\\BGI");
    lineex(x1,x2,y1,y2);
    getch();

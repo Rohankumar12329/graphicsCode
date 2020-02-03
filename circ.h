@@ -1,12 +1,3 @@
-#include<stdio.h>
-#include<graphics.h>
-#include<math.h>
-#include<conio.h>
-#include<time.h>
-#include<dos.h>
-#include<iostream>
-
-using namespace std;
 
 void circles(int x, int y,int x1,int y1)
 {
@@ -21,7 +12,7 @@ void circles(int x, int y,int x1,int y1)
 
 }
 
-void drawcircle(int r,int x1=320,int y1=240)
+void drawCircle(int r,int x1=320,int y1=240,int i = 9)
 {
     int x=0;
     int y= r;
@@ -37,6 +28,34 @@ void drawcircle(int r,int x1=320,int y1=240)
             y--;
         }
         x++;
-        circles(x,y,x1,y1);
+        switch(i)
+        {
+        case 1 :
+            putpixel(x1+x,y1+(-y),WHITE);
+            break;
+        case 2 :
+            putpixel(x1+y,y1+(-x),WHITE);
+            break;
+        case 3 :
+            putpixel(x1+y,y1+x,WHITE);
+            break;
+        case 4 :
+            putpixel(x1+x,y1+y,WHITE);
+            break;
+        case 5 :
+            putpixel(x1+(-x),y1+y,WHITE);
+            break;
+        case 6 :
+            putpixel(x1+(-y),y1+x,WHITE);
+            break;
+        case 7 :
+            putpixel(x1+(-y),y1+(-x),WHITE);
+            break;
+        case 8 :
+            putpixel(x1+(-x),y1+(-y),WHITE);
+            break;
+        default :
+            circles(x,y,x1,y1);
+        }
     }
 }

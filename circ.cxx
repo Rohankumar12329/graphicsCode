@@ -38,6 +38,7 @@ void drawcircle(int r,int x1=320,int y1=240)
         }
         x++;
         circles(x,y,x1,y1);
+        delay(50);
     }
 }
 
