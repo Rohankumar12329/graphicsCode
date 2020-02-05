@@ -1,4 +1,4 @@
-drawParabola(int x,int y,int x1,int y1)
+void drawParabola(int x,int y,int x1,int y1)
 {
     putpixel((-x)+x1,y+y1,WHITE);
     putpixel((-x)+x1,(-y)+y1,WHITE);

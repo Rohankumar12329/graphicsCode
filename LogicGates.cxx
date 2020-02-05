@@ -8,15 +8,6 @@
 #include"line.h"
 #include"circ.h"
 
-void And_gate(int x,int y)
-{
-    parabola(20,x,y);
-    lineex(x,x+30,y,y);
-    lineey(x-20,x-20,y-27,y+27);
-    lineex(x-52,x-22,y-15,y-15);
-    lineex(x-52,x-22,y+15,y+15);
-}
-
 void or_gate(int x,int y)
 {
     drawCircle(60,x,y+42,1);
@@ -40,6 +31,15 @@ void and_gate(int x,int y)
     lineey(x-10,x-10,y-25,y+23);
     lineex(x-45,x-12,y-15,y-15);
     lineex(x-45,x-12,y+15,y+15);
+}
+
+void And_gate(int x,int y)
+{
+    parabola(20,x,y);
+    lineex(x,x+30,y,y);
+    lineey(x-20,x-20,y-27,y+27);
+    lineex(x-52,x-22,y-15,y-15);
+    lineex(x-52,x-22,y+15,y+15);
 }
 
 void not_gate(int x,int y)

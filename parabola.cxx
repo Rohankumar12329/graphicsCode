@@ -47,3 +47,16 @@ void parabola(int p)
         drawParabola(x,y);
     }
 }
+
+
+int main()
+{
+        int gdriver = DETECT, gmode, errorcode;
+    initgraph(&gdriver, &gmode,"C:\\TURBOC3\\BGI");
+
+    parabola(100);
+
+    getch();
+   closegraph();
+}
+
