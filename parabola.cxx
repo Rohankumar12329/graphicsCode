@@ -14,9 +14,6 @@ drawParabola(int x,int y)
 
 void parabola(int p)
 {
-    int gdriver = DETECT, gmode, errorcode;
-    initgraph(&gdriver, &gmode,"C:\\TURBOC3\\BGI");
-
     int x=0,y=0,d=2*(p-1);
     drawParabola(x,y);
     while(y<=p)

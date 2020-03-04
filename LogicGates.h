@@ -1,3 +1,7 @@
+#include"parabola.h"
+#include"line.h"
+#include"circ.h"
+
 void or_gate(int x,int y)
 {
     drawCircle(60,x,y+42,1);
@@ -9,6 +13,18 @@ void or_gate(int x,int y)
     lineex(x-23,x+3,y+10,y+10);
 }
 
+void nor_gate(int x, int y)
+{
+    drawCircle(60,x,y+42,1);
+    drawCircle(60,x,y-42,4);
+    drawCircle(25,x-18,y,2);
+    drawCircle(25,x-18,y,3);
+    drawCircle(3,x+45,y);
+    lineex(x+48,x+76,y,y);
+    lineex(x-23,x+3,y-10,y-10);
+    lineex(x-23,x+3,y+10,y+10);
+}
+
 void and_gate(int x,int y)
 {
     drawCircle(25,x,y,1);
@@ -16,6 +32,21 @@ void and_gate(int x,int y)
     drawCircle(25,x,y,2);
     drawCircle(25,x,y,3);
     lineex(x+25,x+55,y,y);
+    lineex(x-10,x,y-25,y-25);
+    lineex(x-10,x,y+25,y+25);
+    lineey(x-10,x-10,y-25,y+23);
+    lineex(x-45,x-12,y-15,y-15);
+    lineex(x-45,x-12,y+15,y+15);
+}
+
+void nand_gate(int x, int y)
+{
+    drawCircle(25,x,y,1);
+    drawCircle(25,x,y,4);
+    drawCircle(25,x,y,2);
+    drawCircle(25,x,y,3);
+    drawCircle(3,x+28,y);
+    lineex(x+31,x+61,y,y);
     lineex(x-10,x,y-25,y-25);
     lineex(x-10,x,y+25,y+25);
     lineey(x-10,x-10,y-25,y+23);
@@ -54,3 +85,18 @@ void xor_gate(int x,int y)
     lineex(x-23,x-3,y-10,y-10);
     lineex(x-23,x-3,y+10,y+10);
 }
+
+void xnor_gate(int x,int y)
+{
+    drawCircle(60,x,y+42,1);
+    drawCircle(60,x,y-42,4);
+    drawCircle(25,x-18,y,2);
+    drawCircle(25,x-18,y,3);
+    drawCircle(25,x-24,y,2);
+    drawCircle(25,x-24,y,3);
+    drawCircle(3,x+46,y);
+    lineex(x+50,x+80,y,y);
+    lineex(x-23,x-3,y-10,y-10);
+    lineex(x-23,x-3,y+10,y+10);
+}
+

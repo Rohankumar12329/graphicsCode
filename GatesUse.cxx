@@ -4,9 +4,6 @@
 #include<conio.h>
 #include<time.h>
 #include<dos.h>
-#include"parabola.h"
-#include"line.h"
-#include"circ.h"
 #include"LogicGates.h"
 using namespace std;
 
